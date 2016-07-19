@@ -562,8 +562,8 @@ SHELL=${CONFIG_SHELL-/bin/sh}
 PACKAGE_NAME='LLVM'
 PACKAGE_TARNAME='llvm'
 PACKAGE_VERSION='3.7.1'
-PACKAGE_STRING='LLVM 3.7.1'
-PACKAGE_BUGREPORT='http://llvm.org/bugs/'
+PACKAGE_STRING='Obfuscator-LLVM 3.7.1'
+PACKAGE_BUGREPORT='http://o-llvm.org'
 
 ac_unique_file="lib/IR/Module.cpp"
 # Factoring default headers for most tests.
