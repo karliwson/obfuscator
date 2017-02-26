@@ -29,6 +29,10 @@ namespace llvm {
 class CryptoUtils;
 extern ManagedStatic<CryptoUtils> cryptoutils;
 
+#ifdef  _WIN64
+#define __x86_64__
+#endif
+
 #define BYTE(x, n) (((x) >> (8 * (n))) & 0xFF)
 
 #if defined(__i386) || defined(__i386__) || defined(_M_IX86) ||                \
@@ -53,7 +57,9 @@ extern ManagedStatic<CryptoUtils> cryptoutils;
 #define ENDIAN_LITTLE
 #endif
 #define ENDIAN_64BITWORD
+#ifndef _WIN32
 #define UNALIGNED
+#endif
 
 #elif(defined(__R5900) || defined(R5900) || defined(__R5900__)) &&             \
     (defined(_mips) || defined(__mips__) || defined(mips))
